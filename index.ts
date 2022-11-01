@@ -239,28 +239,107 @@
     
 
 
-interface IPerson {
-        name:string;
-        age:number;
-}
+// interface IPerson {
+//         name:string;
+//         age:number;
+//         walk(to:string) : void;
+// }
 
-interface IAdmin {
-        pass: string;
-        isBoroda: boolean;
-        run(destination:string, speed: number) : void;
-}
-interface IAdmin {
-        city: string;
-}
+// interface IAdmin {
+//         pass: string;
+//         isBoroda: boolean;
+//         run(destination:string, speed: number) : void;
+// }
+// interface IAdmin {
+//         city: string;
+// }
 // interface IPersonAdmin extends IPerson, IAdmin {
 //         city: string;
 // }
 
-const obj : IAdmin = {
-        pass : 'valerchik',
-        isBoroda:true,
-        city: 'Gomel',
-        run(destination,speed) {
-                console.log(`${this.pass} runs to ${destination}`);   
+// const obj : IAdmin = {
+//         pass : 'valerchik',
+//         isBoroda:true,
+//         city: 'Gomel',
+//         run(destination,speed) {
+//                 console.log(`${this.pass} runs to ${destination}`);   
+//         }
+// };
+
+
+
+
+
+// class Person {
+//         readonly name  : string;
+//         age = 0;
+
+//         static planet = 'Earth'
+
+//         constructor (name:string) {
+//                 this.name = name;
+//         }
+
+//         run(destination:string) {
+//                 console.log(`${this.name} to ${destination}`);
+                
+//         }
+// }
+
+
+
+// const p = new Person('Valerchik');
+
+
+// class Person {
+//         readonly name  : string;
+//         // private age = 0;
+//         // protected age = 0;
+//         // public age = 0;
+
+//         static planet = 'Earth'
+
+//         constructor (name:string) {
+//                 this.name = name;
+//         }
+
+//         run(destination:string) {
+//                 console.log(`${this.name} to ${destination}`);
+                
+//         }
+// }
+
+
+// class Player extends Person {
+//         constructor(name:string){
+//                 super(name)
+//         }
+
+//         play () {
+//                 console.log(`${this.name} play`)
+//         }
+// }
+
+// const p = new Player('Valerchik');
+
+// console.log(p.age);
+
+
+
+//shorcat
+
+
+class Person {
+        // private age = 0;
+        // protected age = 0;
+        // public age = 0;
+
+        static planet = 'Earth'
+
+        constructor (public name:string) {}
+
+        run(destination:string) {
+                console.log(`${this.name} to ${destination}`);
+                
         }
-};
+}
